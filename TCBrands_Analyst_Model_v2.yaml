@@ -1,0 +1,242 @@
+name: TCBrands_Analyst_Model_v2
+tables:
+  - name: TB_COPA_AGGR_SYNTHETIC
+    description: This table stores aggregated synthetic data for COPA (Controlling
+      Operations Performance Analysis) reporting, providing a summary of actual and
+      planned financial performance metrics for various brands, regions, and periods.__
+    base_table:
+      database: TCBRANDS
+      schema: PUBLIC
+      table: TB_COPA_AGGR_SYNTHETIC
+    dimensions:
+      - name: EDAP_BRAND_NAME
+        synonyms:
+          - '  '
+        description: Brand Name of Golf Equipment Manufacturer__
+        expr: EDAP_BRAND_NAME
+        data_type: TEXT
+        sample_values:
+          - Callaway
+          - Odyssey
+          - TravisMathew
+      - name: BRAND
+        synonyms:
+          - '  '
+        description: Brand of golf equipment or accessories.__
+        expr: BRAND
+        data_type: TEXT
+        sample_values:
+          - Big Bertha Driver
+          - Odyssey White Hot Putter
+          - Chrome Soft Golf Ball
+      - name: REGION
+        synonyms:
+          - '  '
+        description: Geographic Region__
+        expr: REGION
+        data_type: TEXT
+        sample_values:
+          - EMEA
+          - LATAM
+          - NA
+      - name: DERIVED_REGION
+        synonyms:
+          - '  '
+        description: Geographic region for which the synthetic data is aggregated.__
+        expr: DERIVED_REGION
+        data_type: TEXT
+        sample_values:
+          - EMEA
+          - LATAM
+          - NA
+      - name: REGION_GROUP
+        synonyms:
+          - '  '
+        description: Geographic region grouping for aggregated synthetic data.__
+        expr: REGION_GROUP
+        data_type: TEXT
+        sample_values:
+          - EMEA
+          - LATAM
+          - NA
+      - name: LATEST_PLAN_VERSION
+        synonyms:
+          - '  '
+        description: Latest Plan Version Number__
+        expr: LATEST_PLAN_VERSION
+        data_type: TEXT
+        sample_values:
+          - '002'
+          - '003'
+          - '001'
+      - name: PERIOD_YEAR
+        synonyms:
+          - '  '
+        description: Financial Period Year__
+        expr: PERIOD_YEAR
+        data_type: TEXT
+        sample_values:
+          - 2024JAN
+          - 2024MAR
+          - 2024APR
+      - name: CURRENT_MTH
+        synonyms:
+          - '  '
+        description: Current month.__
+        expr: CURRENT_MTH
+        data_type: TEXT
+        sample_values:
+          - N
+    time_dimensions:
+      - name: PERIOD_STARTING_DT
+        synonyms:
+          - '  '
+        description: Start Date of the Period__
+        expr: PERIOD_STARTING_DT
+        data_type: DATE
+        sample_values:
+          - '2024-01-01'
+          - '2024-01-31'
+          - '2024-03-31'
+    measures:
+      - name: ACTUAL_NET_SALES_USD
+        synonyms:
+          - '  '
+        description: Actual net sales in USD.__
+        expr: ACTUAL_NET_SALES_USD
+        data_type: FLOAT
+        sample_values:
+          - '1319.98'
+          - '3241.24'
+          - '1344.8'
+      - name: PLANNED_NET_SALES_USD
+        synonyms:
+          - '  '
+        description: Planned net sales in USD.__
+        expr: PLANNED_NET_SALES_USD
+        data_type: FLOAT
+        sample_values:
+          - '1189.02'
+          - '3408.17'
+          - '1809.58'
+      - name: ACTUAL_STANDARD_MARGIN_USD
+        synonyms:
+          - '  '
+        description: Actual Standard Margin in USD__
+        expr: ACTUAL_STANDARD_MARGIN_USD
+        data_type: FLOAT
+        sample_values:
+          - '495.68'
+          - '1219.2'
+          - '331.09'
+      - name: ACTUAL_COGS_STANDARD_USD
+        synonyms:
+          - '  '
+        description: Actual COGS (Cost of Goods Sold) in Standard USD.__
+        expr: ACTUAL_COGS_STANDARD_USD
+        data_type: FLOAT
+        sample_values:
+          - '824.3'
+          - '2022.04'
+          - '1013.71'
+      - name: ACTUAL_COGS_USD
+        synonyms:
+          - '  '
+        description: Actual Cost of Goods Sold in US Dollars__
+        expr: ACTUAL_COGS_USD
+        data_type: FLOAT
+        sample_values:
+          - '824.3'
+          - '2022.04'
+          - '1013.71'
+      - name: ACTUAL_GA_USD
+        synonyms:
+          - '  '
+        description: Actual Gross Margin in US Dollars__
+        expr: ACTUAL_GA_USD
+        data_type: FLOAT
+        sample_values:
+          - '71.69'
+          - '292.17'
+          - '86.09'
+      - name: ACTUAL_OPERATING_INCOME_USD
+        synonyms:
+          - '  '
+        description: Actual Operating Income in USD__
+        expr: ACTUAL_OPERATING_INCOME_USD
+        data_type: FLOAT
+        sample_values:
+          - '423.99'
+          - '927.03'
+          - '244.99999999999997'
+      - name: ACTUAL_OPERATING_INCOME_EXCL_CORP_USD
+        synonyms:
+          - '  '
+        description: Actual Operating Income (Excluding Corporate) in USD.__
+        expr: ACTUAL_OPERATING_INCOME_EXCL_CORP_USD
+        data_type: FLOAT
+        sample_values:
+          - '423.99'
+          - '927.03'
+          - '244.99999999999997'
+      - name: PLANNED_STANDARD_MARGIN_USD
+        synonyms:
+          - '  '
+        description: Planned Standard Margin in USD, representing the expected profit
+          margin for a synthetic product.__
+        expr: PLANNED_STANDARD_MARGIN_USD
+        data_type: FLOAT
+        sample_values:
+          - '349.84'
+          - '696.68'
+          - '391.71'
+      - name: PLANNED_COGS_STANDARD_USD
+        synonyms:
+          - '  '
+        description: Planned COGS (Cost of Goods Sold) in standard US dollars.__
+        expr: PLANNED_COGS_STANDARD_USD
+        data_type: FLOAT
+        sample_values:
+          - '839.18'
+          - '2711.49'
+          - '919.56'
+      - name: PLANNED_COGS_USD
+        synonyms:
+          - '  '
+        description: Planned Costs of Goods Sold in US Dollars.__
+        expr: PLANNED_COGS_USD
+        data_type: FLOAT
+        sample_values:
+          - '839.18'
+          - '2711.49'
+          - '919.56'
+      - name: PLANNED_GA_USD
+        synonyms:
+          - '  '
+        description: Planned Gross Margin in US Dollars.__
+        expr: PLANNED_GA_USD
+        data_type: FLOAT
+        sample_values:
+          - '71.31'
+          - '201.24'
+          - '125.62'
+      - name: PLANNED_OPERATING_INCOME_USD
+        synonyms:
+          - '  '
+        description: Planned Operating Income in USD.__
+        expr: PLANNED_OPERATING_INCOME_USD
+        data_type: FLOAT
+        sample_values:
+          - '278.53'
+          - '495.43999999999994'
+          - '266.09'
+      - name: PLANNED_OPERATING_INCOME_EXCL_CORP_USD
+        synonyms:
+          - '  '
+        description: Planned Operating Income, excluding corporate, in USD.__
+        expr: PLANNED_OPERATING_INCOME_EXCL_CORP_USD
+        data_type: FLOAT
+        sample_values:
+          - '278.53'
+          - '495.43999999999994'
+          - '266.09'
