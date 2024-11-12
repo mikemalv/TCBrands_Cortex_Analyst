@@ -4,8 +4,7 @@
   <img src="https://swingfit.net/wp-content/uploads/2022/09/Callaway-Golf-Logo-596x343-1.png" alt="TCBrands Logo" width="400"/>
 </p>
 
-[![Powered by Snowflake](https://img.shields.io/badge/powered%20by-snowflake-blue.svg)](https://www.snowflake.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![TCBrands Logo](./Cortex_Analyst.png)
 
 ## 📚 Overview
 TCBrands Cortex Analyst leverages Snowflake's intelligent AI service to provide powerful data analysis capabilities. This project utilizes state-of-the-art large language models including Meta Llama and Mistral models, running securely inside Snowflake Cortex.
