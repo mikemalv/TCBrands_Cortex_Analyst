@@ -25,7 +25,7 @@ By default, Cortex Analyst is powered by:
 - [Semantic Model Specification](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst/semantic-model-spec)
 
 ### ❄️ Snowflake CLI
-- [snowCLI]([https://docs.snowflake.com/user-guide/snowflake-cortex/cortex-analyst/rest-api](https://docs.snowflake.com/developer-guide/snowflake-cli/index))
+- [snowCLI]([https://docs.snowflake.com/user-guide/snowflake-cortex/cortex-analyst/rest-api](https://docs.snowflake.com/developer-guide/snowflake-cli/index)
   
 ### ❄️ API Reference
 - [REST API Documentation](https://docs.snowflake.com/user-guide/snowflake-cortex/cortex-analyst/rest-api)
